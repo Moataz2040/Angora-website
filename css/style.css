@@ -1,0 +1,364 @@
+/* General */
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+.clr {
+  clear: both;
+}
+:root {
+  --main-color: #f25454;
+  --g-black: #000000;
+  --bg-word: #dee3e4;
+  --p-color: #212529;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+html,body{
+  overflow-x: hidden;
+}
+/* **************************** */
+/* section-Home */
+.home {
+  min-height: 100vh;
+}
+/* nav */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  color: var(--main-color);
+}
+.nav-social > a {
+  color: #000;
+}
+.nav-social > a:hover {
+  color: var(--main-color);
+}
+/***********************************/
+/* slider */
+.slider1 {
+  /* 100vw can cause an esue because it add a horizontal scrollbar to see under 
+  the vertical scrollbar.
+  so we add overflow-x :hidden; to html or body */
+  width: 100vw;
+  background-image: url(./images/slideshow-1.jpg);
+  background-size: 100% 100%;
+  height: 100vh; 
+}
+.slider2 {
+  background-image: url(./images/slideshow-2.jpg);
+}
+.slider3 {
+  background-image: url(./images/slideshow-3.jpg);
+}
+.slider1 > h1 {
+  font-size: 70px;
+  font-weight: 700;
+}
+.control-shape {
+  border: 1px solid white;
+  padding: 3px 10px 0;
+}
+.control-new1 {
+  position: absolute;
+  left: 0;
+  top: 18rem;
+  bottom: 18rem;
+  display: flex;
+  justify-content: flex-start;
+  height: 3.125rem;
+}
+.control-new2 {
+  position: absolute;
+  left: 0;
+  top: 21rem;
+  bottom: 16rem;
+  display: flex;
+  justify-content: flex-start;
+  height: 3.125rem;
+}
+/* ************************************ */
+/* section-about */
+/* bg-shape */
+
+.bg-shape {
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.back-word {
+  color: var(--bg-word);
+  opacity: 0.4;
+  font-size: calc(1.95rem + 5vw);
+}
+.bg-shape > p {
+  font-size: 2.25rem;
+  line-height: 3.375rem;
+  color: var(--p-color);
+}
+.bg-shape > p > span {
+  display: block;
+  z-index: 3;
+  border-bottom: solid 1px var(--g-black);
+  width: 3rem;
+  margin-right: auto;
+  margin-left: auto;
+  transition: width 0.5s;
+}
+.bg-shape > p:hover > span {
+  width: 5rem;
+}
+/******************/
+/* about-content */
+
+/*skills*/
+
+.items-contain {
+  display: flex;
+  justify-content: space-between;
+}
+.skill-item {
+  width: 90%;
+}
+.bar-container {
+  margin-bottom: 1.5rem;
+}
+.bar-container > p {
+  margin: 0 0 0.5rem;
+  font-size: 0.875rem;
+}
+.bar-container > .bar-head1 {
+  width: 80%;
+}
+.bar-container > .bar-head2 {
+  width: 95%;
+}
+.bar-container > .bar-head3 {
+  width: 85%;
+}
+.bar-container > .bar-head4 {
+  width: 70%;
+}
+.bar-container > p > span {
+  float: right;
+}
+.bar-container > .progress {
+  border-radius: 0.3rem;
+  height: 0.25rem;
+  background-color: var(--bs-progress-bg);
+}
+.bar-container > .progress > .progress-bar {
+  border-radius: 0.3rem;
+  height: 0.25rem;
+  width: 80%;
+  background-color: var(--main-color);
+}
+.bar-container > .progress > .bar2 {
+  width: 95%;
+}
+.bar-container > .progress > .bar3 {
+  width: 85%;
+}
+.bar-container > .progress > .bar4 {
+  width: 70%;
+}
+/*****************************************/
+/* section-team */
+.member-image {
+  position: relative;
+}
+.layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(242, 84, 84, 0.8);
+  opacity: 0;
+  z-index: 3;
+  transition: opacity 0.3s;
+}
+.layer > a {
+  color: white;
+}
+.member-image:hover > .layer {
+  opacity: 1;
+}
+.member-image > figure > img {
+  transition: transform 0.3s;
+}
+.member-image > figure {
+  overflow: hidden;
+}
+.member-image:hover > figure > img {
+  transform: scale(1.1);
+}
+.member-title {
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+.member-image:hover ~ h5 {
+  color: var(--main-color);
+}
+/* question*/
+.btn {
+  color: white;
+  text-decoration: none;
+  background-color: var(--main-color);
+}
+.btn:hover {
+  color: white;
+  background-color: #f38383;
+}
+/* section-services */
+.services {
+  background-color: #fafafa;
+}
+.service-content {
+  padding: 0 0.9375rem;
+}
+.icon {
+  color: var(--main-color);
+}
+.head {
+  font-size: 1.125rem;
+  transition: color 0.3s;
+}
+.service-content:hover > .services-text > .head {
+  color: var(--main-color);
+}
+.item-paragraph {
+  font-size: 0.875rem;
+}
+/* section-blog */
+
+/* section-contact */
+.information-1 {
+  border-bottom: 1px solid #efefef;
+}
+.services-text > a {
+  text-decoration: none;
+  color: rgb(108, 117, 125);
+}
+.services-text > a:hover {
+  color: var(--main-color);
+}
+.head-2 {
+  font-weight: 600;
+}
+
+.input1 {
+  padding: 0.875rem 1.125rem;
+  border: 2px solid #eee;
+}
+.input2 {
+  padding: 0.875rem 1.125rem;
+  border: 2px solid #eee;
+}
+.input-area {
+  padding: 0.875rem 1.125rem;
+  border: 2px solid #eee;
+}
+form > a {
+  padding: 1.125rem 2rem;
+}
+/* footer */
+.footer-1 {
+  background-image: url(./images/dotted-map.png);
+  background-size: cover;
+}
+.email {
+  text-decoration: none;
+  color: rgb(108, 117, 125);
+}
+.button-contain {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(242, 84, 84, 0.5);
+  border-radius: 50px;
+  transform: translateY(-150%);
+  transition: background-color 0.5s;
+}
+.button-contain:hover {
+  background-color: rgba(242, 84, 84, 1);
+}
+
+.email:hover {
+  color: var(--main-color);
+}
+.footer1-list {
+  list-style: none;
+}
+.tag {
+  text-decoration: none;
+  font-size: 0.8125rem;
+  color: rgb(108, 117, 125);
+  padding: 0.125rem 0.625rem;
+  border: 1px solid rgb(108, 117, 125);
+  border-radius: 0.125rem;
+  margin: 0 0.5rem 0.5rem 0;
+  transition: color 0.3s, border-color 0.3s;
+}
+.tag:hover {
+  color: var(--main-color);
+  border-color: var(--main-color);
+}
+.footer-2 {
+  padding: 2rem 0;
+}
+.footer2-social > a {
+  color: white;
+}
+.email-2 {
+  color: white;
+}
+/******************************************/
+/* responsive */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  /* home */
+  .slider1 > h1 {
+    font-size: 36px;
+  }
+  /* blog */
+  .client-1 > p {
+    font-size: 16px;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  /* home */
+  .slider1 > h1 {
+    font-size: 36px;
+  }
+  /* blog */
+  .client-1 > p {
+    font-size: 16px;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  /* home */
+  .slider1 > h1 {
+    font-size: 70px;
+  }
+  /* blog */
+  .client-1 > p {
+    font-size: 22px;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
